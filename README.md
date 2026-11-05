@@ -30,3 +30,5 @@ scripts/eval_all.sh "base p50c p25c p10c" math500,gsm8k
 
 Environment: vLLM 0.32.0+cu129, torch 2.13.0+cu129, math-verify 0.9.0 (the machine's driver supports CUDA 12.8,
 so vLLM 0.33's CUDA 13 wheels do not run).
+
+See [DISCUSSION.md](DISCUSSION.md) for the criticisms of the result and our thinking-on/off comparison.

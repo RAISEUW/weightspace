@@ -1,0 +1,64 @@
+{
+ "_job": {
+  "protocol": "nothink35",
+  "ckpt": "/data/billhowe/weightspace/models/p50c",
+  "ckpt_mtime": 1793825545.6167107,
+  "shard": "2/4"
+ },
+ "math500": {
+  "acc": 0.404,
+  "n_problems": 125,
+  "samples": 4,
+  "cut_share": 0.296,
+  "mean_tokens": 3655.364,
+  "s": 104,
+  "ok": 202,
+  "total": 500,
+  "cut": 148,
+  "tokens_sum": 1827682,
+  "shard": "2/4",
+  "no_answer_finished": 1,
+  "ok_lenient": 210
+ },
+ "gsm8k": {
+  "acc": 0.5409090909090909,
+  "n_problems": 330,
+  "samples": 2,
+  "cut_share": 0.03636363636363636,
+  "mean_tokens": 1166.6409090909092,
+  "s": 47,
+  "ok": 357,
+  "total": 660,
+  "cut": 24,
+  "tokens_sum": 769983,
+  "shard": "2/4",
+  "no_answer_finished": 0,
+  "ok_lenient": 359
+ },
+ "_protocol": {
+  "name": "nothink35",
+  "sampling": {
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "top_k": 20,
+   "presence_penalty": 1.5,
+   "max_tokens": 8192,
+   "seed": 0
+  },
+  "samples": {
+   "aime24": 16,
+   "aime25": 16,
+   "amc23": 16,
+   "math500": 4,
+   "minerva": 4,
+   "olympiad": 4,
+   "gsm8k": 2,
+   "mmlupro1k": 1,
+   "gpqa": 4,
+   "ifeval": 2
+  },
+  "thinking": false,
+  "prompt": "Please reason step by step, and put your final answer within \\boxed{}.",
+  "ckpt": "/data/billhowe/weightspace/models/p50c"
+ }
+}

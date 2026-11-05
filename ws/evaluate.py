@@ -38,6 +38,9 @@ SAMPLING_THINK35 = {"temperature": 0.6, "top_p": 0.95, "top_k": 20, "presence_pe
 # ... but thinking looped at 0.8B; the evaluation uses the model card's NON-thinking benchmark setting instead
 SAMPLING_NOTHINK35 = {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "presence_penalty": 1.5, "max_tokens": 8192,
                       "seed": 0}
+# weightspace: the think35 sampling and token cap with thinking switched OFF (enable_thinking=False), to separate the
+# edit's effect from the mode switch
+SAMPLING_THINK35_OFF = dict(SAMPLING_THINK35)
 # candidate models for the next experiment (2026-10-24: LFM2.5-350M / Gemma 3 270M IT / Qwen3-0.6B), each with
 # its model card's recommended sampling
 SAMPLING_LFM = {"temperature": 0.1, "top_k": 50, "repetition_penalty": 1.05, "max_tokens": 8192, "seed": 0}
@@ -128,7 +131,7 @@ def load_set(name):
 
 
 def run(ckpt, out, sets, thinking=False, protocol="nothink", shard=None):
-    sampling = {"think": SAMPLING_THINK, "think35": SAMPLING_THINK35, "nothink35": SAMPLING_NOTHINK35, "lfm": SAMPLING_LFM,
+    sampling = {"think": SAMPLING_THINK, "think35": SAMPLING_THINK35, "nothink35": SAMPLING_NOTHINK35, "think35off": SAMPLING_THINK35_OFF, "lfm": SAMPLING_LFM,
                 "gemma3": SAMPLING_GEMMA3}.get(protocol, SAMPLING)
     thinking = thinking or protocol in ("think", "think35")
     from vllm import LLM, SamplingParams
@@ -210,7 +213,7 @@ if __name__ == "__main__":
     ap.add_argument("ckpt", nargs="?")
     ap.add_argument("out", nargs="?")
     ap.add_argument("--sets", default=",".join(SETS))
-    ap.add_argument("--protocol", choices=["nothink", "think", "think35", "nothink35", "lfm", "gemma3"], default="nothink")
+    ap.add_argument("--protocol", choices=["nothink", "think", "think35", "nothink35", "think35off", "lfm", "gemma3"], default="nothink")
     ap.add_argument("--shard", help="i/k: evaluate problems i::k only (one set per job; combine with merge.py)")
     ap.add_argument("--thinking", action="store_true", help="reference only: the unedited model with thinking ON "
                     "(same sampling and token cap)")

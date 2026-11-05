@@ -18,3 +18,5 @@ down-projections of layers 15 and 19) raises MATH-500 from 8.0 to 48.9 and GSM8K
 the thinking loops (answers cut at 32k tokens fall from 93% to 32% on MATH-500).
 
 Files: `<model>/merged.json` (from `ws/merge.py`), `<model>/parts/s<g>of4/` (`scores.json` and per-problem 0/1 results).
+
+See `../../DISCUSSION.md` for the criticisms, thinking-block statistics and thinking-off evaluations.

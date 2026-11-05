@@ -1,0 +1,82 @@
+{
+ "unedited/math500": {
+  "n": 200,
+  "closed_think": 0.065,
+  "think_tokens_median": 32768.0,
+  "think_tokens_median_closed": 5398.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 1,
+  "answer_tokens_median_closed": 356.0,
+  "acc_when_closed": 1.0
+ },
+ "unedited/gsm8k": {
+  "n": 200,
+  "closed_think": 0.105,
+  "think_tokens_median": 32768.0,
+  "think_tokens_median_closed": 3650.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 3,
+  "answer_tokens_median_closed": 284.0,
+  "acc_when_closed": 0.9523809523809523
+ },
+ "p10c/math500": {
+  "n": 200,
+  "closed_think": 0.205,
+  "think_tokens_median": 32768.0,
+  "think_tokens_median_closed": 12153.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 1,
+  "answer_tokens_median_closed": 422.0,
+  "acc_when_closed": 0.8048780487804879
+ },
+ "p10c/gsm8k": {
+  "n": 200,
+  "closed_think": 0.29,
+  "think_tokens_median": 32767.0,
+  "think_tokens_median_closed": 10138.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 0,
+  "answer_tokens_median_closed": 375.0,
+  "acc_when_closed": 0.8448275862068966
+ },
+ "p25c/math500": {
+  "n": 200,
+  "closed_think": 0.145,
+  "think_tokens_median": 32768.0,
+  "think_tokens_median_closed": 8028.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 0,
+  "answer_tokens_median_closed": 464.0,
+  "acc_when_closed": 0.8620689655172413
+ },
+ "p25c/gsm8k": {
+  "n": 200,
+  "closed_think": 0.25,
+  "think_tokens_median": 32768.0,
+  "think_tokens_median_closed": 7888.5,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 3,
+  "answer_tokens_median_closed": 334.5,
+  "acc_when_closed": 0.94
+ },
+ "p50c/math500": {
+  "n": 200,
+  "closed_think": 0.76,
+  "think_tokens_median": 19586.5,
+  "think_tokens_median_closed": 15944.5,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 0,
+  "answer_tokens_median_closed": 809.0,
+  "acc_when_closed": 0.6052631578947368
+ },
+ "p50c/gsm8k": {
+  "n": 200,
+  "closed_think": 0.94,
+  "think_tokens_median": 9242.0,
+  "think_tokens_median_closed": 8995.0,
+  "think_under_20_tokens": 0,
+  "think_under_1000_tokens": 8,
+  "answer_tokens_median_closed": 427.5,
+  "acc_when_closed": 0.648936170212766
+ }
+}
