@@ -1,0 +1,18 @@
+{
+ "math500": {
+  "acc": 0.142,
+  "cut_share": 0.8615,
+  "mean_tokens": 29622.7445,
+  "problems": 500,
+  "complete": true,
+  "acc_lenient": 0.3335
+ },
+ "gsm8k": {
+  "acc": 0.2585291887793783,
+  "cut_share": 0.7429871114480667,
+  "mean_tokens": 26603.913570887034,
+  "problems": 1319,
+  "complete": true,
+  "acc_lenient": 0.5322213798332069
+ }
+}
